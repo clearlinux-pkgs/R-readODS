@@ -4,7 +4,7 @@
 #
 Name     : R-readODS
 Version  : 1.6.7
-Release  : 4
+Release  : 5
 URL      : https://cran.r-project.org/src/contrib/readODS_1.6.7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/readODS_1.6.7.tar.gz
 Summary  : Read and Write ODS Files
@@ -23,6 +23,7 @@ BuildRequires : R-readr
 BuildRequires : R-stringi
 BuildRequires : R-xml2
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 # readODS
@@ -39,10 +40,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562446509
+export SOURCE_DATE_EPOCH=1571885681
 
 %install
-export SOURCE_DATE_EPOCH=1562446509
+export SOURCE_DATE_EPOCH=1571885681
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
