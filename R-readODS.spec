@@ -4,7 +4,7 @@
 #
 Name     : R-readODS
 Version  : 1.6.7
-Release  : 8
+Release  : 9
 URL      : https://cran.r-project.org/src/contrib/readODS_1.6.7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/readODS_1.6.7.tar.gz
 Summary  : Read and Write ODS Files
@@ -14,16 +14,11 @@ Requires: R-cellranger
 Requires: R-readr
 Requires: R-stringi
 Requires: R-xml2
-BuildRequires : R-Rcpp
 BuildRequires : R-cellranger
-BuildRequires : R-hms
-BuildRequires : R-pillar
-BuildRequires : R-pkgconfig
 BuildRequires : R-readr
 BuildRequires : R-stringi
 BuildRequires : R-xml2
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
 # readODS
@@ -34,21 +29,22 @@ The file `contents.xml` is a XML file containing all the numbers and formulas us
 
 %prep
 %setup -q -c -n readODS
+cd %{_builddir}/readODS
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571885681
+export SOURCE_DATE_EPOCH=1589761057
 
 %install
-export SOURCE_DATE_EPOCH=1571885681
+export SOURCE_DATE_EPOCH=1589761057
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
