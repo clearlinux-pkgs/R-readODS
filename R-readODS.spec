@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-readODS
-Version  : 2.0.0
-Release  : 33
-URL      : https://cran.r-project.org/src/contrib/readODS_2.0.0.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/readODS_2.0.0.tar.gz
+Version  : 2.1.0
+Release  : 34
+URL      : https://cran.r-project.org/src/contrib/readODS_2.1.0.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/readODS_2.1.0.tar.gz
 Summary  : Read and Write ODS Files
 Group    : Development/Tools
 License  : GPL-3.0
@@ -18,16 +18,13 @@ Requires: R-readr
 Requires: R-stringi
 Requires: R-tibble
 Requires: R-vctrs
-Requires: R-xml2
 Requires: R-zip
 BuildRequires : R-cellranger
 BuildRequires : R-cpp11
-BuildRequires : R-dplyr
 BuildRequires : R-readr
 BuildRequires : R-stringi
 BuildRequires : R-tibble
 BuildRequires : R-vctrs
-BuildRequires : R-xml2
 BuildRequires : R-zip
 BuildRequires : buildreq-R
 # Suppress stripping binaries
@@ -56,10 +53,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1691686152
+export SOURCE_DATE_EPOCH=1694450740
 
 %install
-export SOURCE_DATE_EPOCH=1691686152
+export SOURCE_DATE_EPOCH=1694450740
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -146,6 +143,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/readODS/tests/testdata/empty.ods
 /usr/lib64/R/library/readODS/tests/testdata/excel_repeat.ods
 /usr/lib64/R/library/readODS/tests/testdata/flat.fods
+/usr/lib64/R/library/readODS/tests/testdata/flights_head.RDS
 /usr/lib64/R/library/readODS/tests/testdata/fuzz.txt
 /usr/lib64/R/library/readODS/tests/testdata/horrible.ods
 /usr/lib64/R/library/readODS/tests/testdata/issue81.ods
@@ -179,6 +177,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/readODS/tests/testdata/test_naming.ods
 /usr/lib64/R/library/readODS/tests/testdata/wild_character_encoding.ods
 /usr/lib64/R/library/readODS/tests/testthat.R
+/usr/lib64/R/library/readODS/tests/testthat/plant.ods
 /usr/lib64/R/library/readODS/tests/testthat/test_as_tibble.R
 /usr/lib64/R/library/readODS/tests/testthat/test_cellranger.R
 /usr/lib64/R/library/readODS/tests/testthat/test_col_types.R
