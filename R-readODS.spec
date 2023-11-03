@@ -5,7 +5,7 @@
 #
 Name     : R-readODS
 Version  : 2.1.0
-Release  : 34
+Release  : 35
 URL      : https://cran.r-project.org/src/contrib/readODS_2.1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/readODS_2.1.0.tar.gz
 Summary  : Read and Write ODS Files
